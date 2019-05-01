@@ -1,0 +1,197 @@
+body, div, span, header, footer, nav, section, aside, article, ul, dl, dt, dd, li, a, p, h1, h2, h3, h4,h5, h6, i, b, figure, figcaption {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    font-style: normal;
+    text-decoration: none;
+    border: none;
+    font-family: "Microsoft Yahei",sans-serif;
+    -webkit-tap-highlight-color:transparent;
+    -webkit-font-smoothing: antialiased;
+    &:focus {
+        outline: none;
+    }
+}
+
+/*定义滚动条高宽及背景 高宽分别对应横竖滚动条的尺寸*/  
+::-webkit-scrollbar  
+{  
+    width: 3px;  
+    height: 8px;  
+    background-color: #F5F5F5;  
+}  
+body::-webkit-scrollbar{
+    width:8px
+}
+  
+/*定义滚动条轨道 内阴影+圆角*/  
+::-webkit-scrollbar-track  
+{  
+    -webkit-box-shadow: inset 0 0 1px rgba(0,0,0,0);  
+    border-radius: 10px;  
+    background-color: #F5F5F5;  
+}  
+  
+/*定义滑块 内阴影+圆角*/  
+::-webkit-scrollbar-thumb  
+{  
+    border-radius: 10px;  
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);  
+    background-color: #ccc;  
+}  
+
+input[type="button"], input[type="submit"], input[type="search"], input[type="reset"] {
+    -webkit-appearance: none;
+}
+
+textarea { -webkit-appearance: none;}   
+
+html,body{
+    height: 100%;
+    width: 100%;
+    // background-color: #F5F5F5;
+}
+
+.fillcontain{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    background: #fff 
+}
+.clear:after{
+    content: '';
+    display: block;
+    clear: both;
+}
+
+.clear{
+    zoom:1;
+}
+
+.back_img{
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+.margin{
+    margin: 0 auto;
+}
+
+.left{
+    float: left;
+}
+
+.right{
+    float: right;
+}
+
+.hide{
+    display: none;
+}
+
+.show{
+    display: block;
+}
+
+.yellow{
+    color:#f89406 !important
+}
+.blue{
+    color:#0190d4 !important
+}
+.cursor{
+    cursor:pointer
+}
+
+// 超出部分用省略号。。。
+.ellipsis{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.word-wrap
+    word-break: break-all //英文字母换行
+    // word-break: break-word 英文单词换行
+    white-space pre-wrap //中文换行
+
+
+.el-input__inner,.el-button
+    border-color #bfd4d9
+
+// 按钮背景色
+.bg-zs
+    background-color: #f56d0a
+    color #fff
+.bg-zs,.el-button:active
+    border-color: #f56d0a;
+    outline: 0;
+
+
+
+.fs16
+    font-size 16px
+.fs14
+    font-size 14px
+
+.el-table td,.el-table th
+    padding 7px 0px
+//过滤选项里表格样式
+.save-now .el-table td, .save-now .el-table th
+    padding 0
+
+// 管理过滤器dialog样式
+.el-dialog__header
+    background #229dfa
+    padding-top 10px 
+    .el-dialog__title
+        color #fff
+    .el-dialog__headerbtn 
+        top 15px
+        .el-dialog__close
+            color #fff
+.mana_dialog .el-table_1_column_4 .cell
+    overflow: visible
+
+
+
+//首页精确搜索 多选框
+.search .el-checkbox
+    margin-left 0 !important
+    margin-right 30px !important
+
+.search .el-form-item
+    margin-bottom 10px !important
+
+//去除表格右边线
+.el-table--border td, .el-table--border th
+    border-right none
+
+.action_content .el-input__inner
+    height 35px
+    
+.first .el-table__body-wrapper
+    height: 500px;
+    overflow-y: scroll 
+    overflow-x: scroll 
+    box-sizing border-box
+
+.first .el-tabs--card>.el-tabs__header .el-tabs__item.is-active  
+    background: #3f83d0
+    color #fff
+    border-left none 
+    border-right none
+.first .el-tabs--card>.el-tabs__header .el-tabs__item
+    border 1px solid #409EFF
+    border-bottom: 1px solid #fff;
+.first .el-tabs--card>.el-tabs__header
+    border-bottom 1px solid #409EFF
+.first .is-disabled
+    cursor not-allowed
+
+.recently .el-table__body-wrapper
+    min-height: 120px;
+
+.underline
+	&:hover	
+		text-decoration underline
+    

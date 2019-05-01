@@ -1,0 +1,1007 @@
+@charset "UTF-8";
+/* CSS Document */
+
+body {
+	margin: 0;
+	padding: 0;
+	color: #444;
+	font-family: "微软雅黑","宋体";
+	font-size: 14px;
+	line-height: 1.4;
+	background-color: #F3F3F3;
+}
+*{
+	margin:0;
+	padding:0;
+}
+
+/* ~~ 元素/标签选择器 ~~ */
+ul, ol, dl { /* 由于浏览器之间的差异，最佳做法是在列表中将填充和边距都设置为零。为了保持一致，您可以在此处指定需要的数值，也可以在列表所包含的列表项（LI、DT 和 DD）中指定需要的数值。请注意，除非编写一个更为具体的选择器，否则您在此处进行的设置将会层叠到 .nav 列表。 */
+	padding: 0;
+	margin: 0;
+	list-style-type: none;
+}
+h1, h2, h3, h4, h5, h6, p {
+	padding: 0;
+	margin: 0;
+
+}
+a{
+	text-decoration: none;
+}
+a img { /* 此选择器将删除某些浏览器中显示在图像周围的默认蓝色边框（当该图像包含在链接中时） */
+	border: none;
+}
+/* ~~ 站点链接的样式必须保持此顺序，包括用于创建悬停效果的选择器组在内。 ~~ */
+a:link {
+	color: #444;
+	text-decoration: underline; /* 除非将链接设置成极为独特的外观样式，否则最好提供下划线，以便可从视觉上快速识别 */
+}
+a:visited {
+	color: #6E6C64;
+	text-decoration: none;
+}
+a:hover, a:active, a:focus { /* 此组选择器将为键盘导航者提供与鼠标使用者相同的悬停体验。 */
+	text-decoration: none;
+}
+
+/* ~~ 此固定宽度容器包含其它 div ~~ */
+.container {
+	width: 1002px;
+	margin: 0 auto; /* 侧边的自动值与宽度结合使用，可以将布局居中对齐 */
+	overflow: hidden;
+	boder-color:#ccc;
+	/*box-shadow:0px 0px 5px #888;*/
+}
+
+/* ~~ 标题未指定宽度。它将扩展到布局的完整宽度。标题包含一个图像占位符，该占位符应替换为您自己的链接徽标 ~~ */
+/*头部样式*/
+
+
+.header-bg {
+	/* [disabled]height:130px; */
+	background-color:#FFF;
+}
+.logo {
+	width:406px;
+	margin-top: 10px;
+
+}
+.logo-bg {
+	float:left;
+	width:406px;
+
+}
+.header {
+	width:1000px;
+	margin:0 auto;
+	height: 75px;
+}
+.header-right {
+	width:590px;
+	float:left;
+	/* [disabled]height:85px; */
+}
+.header-title {
+	padding-top:10px;
+}
+.hot-tel .tt{
+	padding-bottom:5px;
+	width:300px;
+	float:right;
+	color:#666;
+	text-align:right;
+	padding-right: 5px;
+	height: 25px;
+	padding-top: 8px;
+}
+.header-right .header-tel {
+	/* [disabled]padding-top: 15px; */
+	overflow: hidden;
+}
+
+.header-tel .telphone {
+	font-size: 23px;
+	color: #6B0000;
+	font-weight: bold;
+
+	float: right;
+	text-align: right;
+	margin-right: 15px;
+	margin-bottom: 0;
+	margin-left: 15px;
+}
+.telphone span {
+	font-size: 14px;
+	color: #000;
+	font-weight: lighter;
+}
+
+.hot-tel  a {
+	display:block;
+	float:right;
+	padding-left:25px;
+	height:24px;
+	line-height:24px;
+	color:#666;
+	font-size:12px;
+}
+.hot-tel a:link{
+	text-decoration:none;
+}
+.hot-tel .aa1 { color:#F00;}
+.hot-tel .a01 {
+	background-image: url(../../images/top-arrow1.png);
+	background-repeat: no-repeat;
+	background-position: left;
+}
+.hot-tel .a02 {
+	background-image: url(../../images/top-arrow2.png);
+	background-repeat: no-repeat;
+	background-position: left;
+}
+/*.hot-tel .a03 {
+	background-image: url(../../images/top-arrow3.png);
+	background-repeat: no-repeat;
+	background-position: left;
+}*/
+/*.hot-tel .search { background:url(../../images/top-arrow.png) no-repeat -249px 1px;}
+.hot-tel .a05 { background:url(../../images/top-arrow.png) no-repeat -332px 1px;}*/
+.clear{
+	clear:both;
+}
+
+
+
+
+
+/* ~~ 这是布局信息。 ~~
+
+1) 填充只会放置于 div 的顶部和/或底部。此 div 中的元素侧边会有填充。这样，您可以避免使用任何"方框模型数学"。请注意，如果向 div 自身添加任何侧边填充或边框，这些侧边填充或边框将与您定义的宽度相加，得出 *总计* 宽度。您也可以选择删除 div 中的元素的填充，并在该元素中另外放置一个没有任何宽度但具有设计所需填充的 div。
+
+*/
+
+.content {
+	/* [disabled]padding: 5px 0 10px 0; */
+	overflow: hidden;
+	background-color: #FFF;
+	background-image: url(../../images/box-bg.gif);
+	background-repeat: repeat-x;
+	border: 1px solid #E0E0E0;
+	width: 100%;
+}
+.flashimg {
+	display: block;
+
+	width: 1000px;
+	margin:0 auto;
+	border: 2px solid #FFF;
+	box-shadow:0px 0px 5px #FFF;
+	margin-top:10px;
+}
+
+.aboutcompany1 {
+	width: 1000px;
+}
+.aboutcompany1 div img {
+	float: left;
+}
+
+div.ab1 {
+	float: left;
+	width: 704px;
+	margin-left: 3px;
+}
+div.ab2 {
+	float: left;
+	width: 245px;
+	margin-left: 42px;
+	border: 1px dotted #DEDEE4;
+}
+.aboutcompany2 {
+	width: 996px;
+	overflow: hidden;
+	margin: 5px 0 5px 2px;
+	float: left;
+}
+.aboutcompany2 img {
+	float: left;
+}
+
+.classabout {
+	width: 1000px;
+	float: left;
+	margin:0 0 0 4px;
+}
+.classabout .cb1 {
+	float: left;
+	width: 324px;
+	margin: 0px 7px 0px 0;
+	border: 1px solid #CCC;
+	height: 270px;
+}
+
+/*.classabout .cb1 .classtitle {
+	background-image: url(../../images/h2_bgcolor.jpg);
+	background-repeat: repeat-x;
+	height: 38px;
+	width: 323px;
+}*/
+.classtitle .tn {
+	width: 90px;
+	float: left;
+	line-height: 38px;
+	text-align: left;
+	font-weight: bold;
+	color: #333;
+	font-family: "宋体";
+	margin-left: 10px;
+	font-size: 16px;
+	border-right-width: 1px;
+	border-right-style: inset;
+	border-right-color: #C5C5C5;
+}
+.classtitle .more {
+	width: 190px;
+	float: left;
+	line-height: 38px;
+	text-align: right;
+	margin-left: 10px;
+}
+.classtitle .more a {
+	text-decoration: none;
+	font-size: 14px;
+}
+.classabout .cb1 .classtext {
+	margin: 3px 5px;
+	width: 315px;
+}
+.cb1 .classtext img {
+	padding: 3px 5px;
+	border: 1px solid #CCC;
+	width: 295px;
+}
+.cb1 .classtext p {
+	margin: 0;
+	padding: 5px 5px;
+	color: #3F3F3F;
+	font-size: 13px;
+	line-height: 25px;
+}
+
+
+
+
+
+.newslist {
+	float: left;
+	width: 328px;
+	margin-left: 9px;
+	border: 1px solid #ccc;
+	height: 342px;
+	overflow: hidden;
+
+}
+
+/*.newslist h1 {
+	font-size: 16px;
+	line-height: 39px;
+	background-image: url(../../images/h2_bgcolor.jpg);
+	background-repeat: repeat-x;
+	height: 39px;
+	padding: 0;
+	font-weight: normal;
+}*/
+.newslist a {
+	text-decoration: none;
+}
+
+.newslist span{
+	float: left;
+	display: block;
+}
+
+.newslist .tn {
+	font-size: 16px;
+	font-weight: normal;
+	color: #333;
+	width: 85px;
+	border-right-width: 1px;
+	border-right-style: solid;
+	border-right-color: #ccc;
+	display: block;
+	text-align: center;
+}
+
+.newslist .more {
+	font-size: 13px;
+	font-weight: normal;
+	color: #333;
+	text-align: right;
+	width: 220px;
+}
+.newstitle {
+	float: left;
+	width: 320px;
+}
+
+/*.newstitle h2 {
+	background-image: url(../../images/touzi.jpg);
+	background-repeat: no-repeat;
+	background-position: left center;
+	padding-left: 15px;
+	font-size: 13px;
+	font-weight: normal;
+	margin: 3px 5px;
+	width: 300px;
+	display: block;
+	height: 29px;
+	overflow: hidden;
+	color: #555;
+}*/
+.newstitle h2 a {
+	text-decoration: none;
+	width: 230px;
+	display: block;
+	float: left;
+	overflow: hidden;
+	line-height: 29px;
+	color: #555;
+}
+.newstitle h2 span {
+	font-size: 12px;
+	float: left;
+	line-height: 29px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ~~ 其它浮动/清除类 ~~ */
+.fltrt {  /* 此类可用于在页面中使元素向右浮动。浮动元素必须位于其在页面上的相邻元素之前。 */
+	float: right;
+	margin-left: 8px;
+}
+.fltlft { /* 此类可用于在页面中使元素向左浮动。浮动元素必须位于其在页面上的相邻元素之前。 */
+	float: left;
+	margin-right: 8px;
+}
+.clearfloat { /* 如果从 #container 中删除或移出了 #footer，则可以将此类放置在 <br /> 或空 div 中，作为 #container 内最后一个浮动 div 之后的最终元素 */
+	clear:both;
+	height:0;
+	font-size: 1px;
+	line-height: 0px;
+}
+
+
+
+
+
+/*内容页导航*/
+.daohang {
+	width: 1000px;
+	clear: both;
+	margin-top: 10px;
+	margin-right: auto;
+	margin-bottom: 9px;
+	margin-left: auto;
+	background-image: url(../../images/title_bg.gif);
+	background-repeat: no-repeat;
+	background-position: left center;
+	background-color: #F3F3F3;
+	border: #cbc9c9 solid 1px;
+	box-shadow:0px 0px 1px #cbc9c9;
+	padding-top: 5px;
+	padding-right: 0;
+	padding-bottom: 5px;
+	padding-left: 0;
+}
+.daohang .where {
+	font-size: 13px;
+	float: left;
+	height: 19px;
+	line-height: 19px;
+	padding-left: 20px;
+}
+.daohang .where a {
+	text-decoration: none;
+}
+.sidebar {
+	float: left;
+	width: 245px;
+}
+/*左侧子栏目*/
+
+
+
+.classson  {
+	float: left;
+	/* [disabled]width: 245px; */
+
+	border: 1px solid #DAD9D9;
+}
+
+
+.classson ul {
+	list-style-type: none;
+	display: block;
+	float: left;
+	background-image: url(../../images/box-bg.gif);
+	background-repeat: repeat-x;
+	background-color: #FFF;
+	padding:0 5px;
+	width: 230px;
+	padding-bottom:35px;
+}
+.classson ul li {
+	background-image: url(../../images/arrow01.gif);
+	background-repeat: no-repeat;
+	float: left;
+	height: 35px;
+	width: 220px;
+	text-align: left;
+	background-position: left center;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+	border-bottom-color: #DAD9D9;
+	padding:5px 0 5px 0;
+}
+.classson ul li a {
+	line-height: 35px;
+	text-decoration: none;
+	color: #444;
+	font-size: 14px;
+	font-weight: bolder;
+	display: block;
+	padding-left: 18px;
+}
+.classson ul li a:hover{
+	color: #FFF;
+	background-image: url(../../images/subnav2.jpg);
+	background-repeat: no-repeat;
+	background-position: left center;
+	padding-left: 25px;
+
+}
+.classson h3 {
+	background-image: url(../../images/title1-bg.gif);
+	background-repeat: no-repeat;
+	background-position: left center;
+	padding-left: 20px;
+	color: #000;
+	height: 35px;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+	border-bottom-color: #000;
+	line-height: 35px;
+}
+
+
+.addressimg {
+	float: left;
+	width: 240px;
+	margin: 20px 0;
+	border: 1px solid #DAD9D9;
+}
+
+
+.addressimg img {
+	width: 240px;
+	float: left;
+}
+
+
+.newtest {
+	float: left;
+	width: 720px;
+	padding: 10px 8px;
+	overflow: hidden;
+	margin-left: 10px;
+	line-height: 25px;
+	border-left:1px solid #E0E0E0;
+}
+
+
+
+
+
+
+
+/*新闻列表页*/
+.newstlist {
+	float: left;
+	width: 720px;
+	margin-left: 10px;
+
+	padding:0 4px;
+}
+.mintitle {
+	border-bottom: #cbc9c9 solid 1px;
+}
+.mintitle h2 {
+	position: relative;
+	bottom: -1px;
+	font-size: 12px;
+	font-weight: normal;
+	line-height: 28px;
+}
+
+.mintitle span {
+	background-color: #F7F6F6;
+	padding: 0 5px;
+	margin-left: 15px;
+	display: inline-block;
+	border-top-width: 1px;
+	border-right-width: 1px;
+	border-left-width: 1px;
+	border-top-style: solid;
+	border-right-style: solid;
+	border-left-style: solid;
+	border-top-color: #CCC;
+	border-right-color: #CCC;
+	border-left-color: #CCC;
+	margin-top: 5px;
+}
+
+
+/*.newstlist ul li {
+	background-image: url(../../images/touzi.jpg);
+	background-repeat: no-repeat;
+	background-position: 5px center;
+	padding-left: 10px;
+	!* [disabled]font-size: 16px; *!
+	line-height: 39px;
+	border-bottom-width: 1px;
+	border-bottom-style: dotted;
+	border-bottom-color: #CCC;
+}*/
+span.time{
+	float:right;
+}
+.newstlist ul li a {
+	text-decoration: none;
+	width: 680px;
+}
+.newstlist ul li a:hover {
+	text-decoration: underline;
+}
+.newstlist .list {
+	float: left;
+	width: 700px;
+	text-align: center;
+	padding: 10px;
+}
+.text .list {
+	text-align:center;
+	line-height:35px;
+}
+.newstlist h1 {
+	text-align: center;
+	font-size: 24px;
+	color: #000;
+	padding: 20px 0;
+}
+.newstlist .zhongdian {
+	text-align: center;
+	margin-bottom:15px;
+	border-bottom: #CCC dotted 1px;
+	color: #666;
+	padding-bottom: 10px;
+}
+.newstlist .newstest {
+	float: left;
+	width: 710px;
+	margin: 3px 5px;
+	overflow: hidden;
+	font-family: "微软雅黑", "宋体";
+	font-size: 15px;
+	color: #444;
+	padding-bottom:10px;
+}
+.newstlist .newstest p{
+	/* [disabled]margin:0px auto 15px; */
+	line-height:28px;
+
+}
+.newstlist .list .lest {
+	float: left;
+	width: 350px;
+}
+.previous{
+	text-align:left;}
+.next{
+	text-align:right;
+}
+.newstlist .list .lest a {
+	text-decoration:none;
+}
+.aboutnews {
+	width: 720px;
+	float: left;
+	margin-top:50px;
+	border:1px solid #DFDFDF;
+}
+.aboutnews h3{
+	color:#933;
+	padding-left:10px;
+	background-color: #F0F0F0;
+}
+.aboutnews a{
+	width:340px;
+	height:39px;
+	display:block;
+	float:left;
+	overflow:hidden;
+	text-decoration: none;
+	line-height: 39px;
+	font-size:16px;
+	color: #000;
+	padding-left:10px;
+}
+
+.text {
+	float: left;
+	width: 1000px;
+	background-color: #FFF;
+	border:#cbc9c9 solid 1px;
+	background-image: url(../../images/box-bg.gif);
+	background-repeat: repeat-x;
+}
+.text .showus {
+	float: left;
+	width: 305px;
+	margin: 5px 0 5px 23px;
+}
+
+.text .showus a {
+	float: left;
+	width: 300px;
+	text-decoration: none;
+}
+.text .showus a img {
+	float: left;
+	width: 300px;
+	height: 250px;
+}
+.text .showus a span {
+	text-align: center;
+	font-size: 16px;
+	color: #000;
+	width: 300px;
+	float: left;
+}
+.abouttext {
+	float: left;
+	width: 990px;
+	padding: 5px 5px;
+	border: 1px solid #DAD9D9;
+	overflow: hidden;
+	background-color: #FFF;
+	background-image: url(../../images/box-bg.gif);
+	background-repeat: repeat-x;
+}
+.nav {
+	background-color: #8C0000;
+}
+.nav1 {
+	display: block;
+	margin: 0 auto;
+	width: 1002px;
+}
+
+
+
+/*导航菜单*/
+#nav {
+	line-height: 39px;
+	list-style-type: none;
+	color: #FFF;
+}
+#nav a {
+	display: block;
+	/* [disabled]width: 80px; */
+	text-align:center;
+	font-size: 16px;
+	text-decoration: none;
+	color: #FFF;
+}
+#nav a:link {
+	color:#FFF;
+	text-decoration:none;
+}
+#nav a:hover {
+	color:#FFF;
+	text-decoration:none;
+}
+#nav li {
+	float: left;
+	width: 141px;
+	border-right-width: 1px;
+	border-right-style: solid;
+	border-right-color: #FFF;
+	border-left-width: 1px;
+	border-left-style: solid;
+	border-left-color: #FFF;
+}
+#nav li a:hover{
+
+}
+#nav li ul {
+	line-height: 27px;
+	list-style-type: none;
+	text-align:left;
+	left: -999em;
+	width: 180px;
+	position: absolute;
+	z-index: 99;
+}
+#nav li ul li{
+	float: left;
+	/* [disabled]width: 150px; */
+	background-color: #FFE4E1;
+	border-top-width: 1px;
+	border-top-style: solid;
+	border-top-color: #FFF;
+	z-index: 998;
+}
+#nav li ul a{
+	display: block;
+	/* [disabled]width: 128px; */
+	text-align:center;
+	/* [disabled]padding-left:24px; */
+	color: #000;
+	z-index: 998;
+}
+#nav li ul a:link {
+	color:#000;
+	text-decoration:none;
+}
+#nav li ul a:visited {
+	text-decoration:none;
+}
+#nav li ul a:hover {
+color:#F3F3F3;text-decoration:none;font-weight:normal;
+background:#C00;
+}
+#nav li:hover ul {
+left: auto;
+}
+#nav li.sfhover ul {
+left: auto;
+}
+
+
+#nav li a {
+}
+#nav .nf {
+	border-left-width: 2px;
+	border-left-style: solid;
+	border-left-color: #FFF;
+}
+#nav .ne {
+	border-right-width: 2px;
+	border-right-style: solid;
+	border-right-color: #FFF;
+}
+
+
+
+
+
+
+.mainbox{
+    overflow:hidden;
+    position:relative;
+}
+.flashbox{
+   overflow:hidden;
+    position:relative;
+}
+.imagebox{
+    text-align:right;position:relative;
+	z-index:-2;
+}
+
+.bitdiv{display:inline-block;width:18px;height:18px;margin:0 10px 10px 0px;cursor:pointer;float:right;}
+/*.defimg{background-image:url(../../images/02.png)}
+.curimg{background-image:url(../../images/01.png)}*/
+
+
+.tab{
+	float: left;
+	height: 38px;
+	width: 75px;
+	text-align: center;
+	border-right-width: 1px;
+	border-right-style: solid;
+	border-right-color: #ccc;
+}
+.taba {
+	width: 650px;
+	border: 1px solid #ccc;
+	margin: 0 0 0 4px;
+}
+/*.taba #bg .xixi1 {
+	background-image: url(../../images/h2_bgcolor.jpg);
+}*/
+.taba #bg .tab a {
+	line-height: 38px;
+	text-decoration: none;
+	text-align: center;
+}
+
+.taba #bg {
+	width: 650px;
+	height: 39px;
+}
+
+.taba #TabTab03Con1 {
+	height: 295px;
+	width: 650px;
+}.taba #TabTab03Con2 {
+	height: 295px;
+	width: 650px;
+}
+.wt {
+	font-size: 12px;
+	float: left;
+	width: 640px;
+	margin: 0 5px;
+}
+div.frend {
+	float: left;
+	width: 989px;
+	margin: 10px 0 0 4px;
+	border: 1px solid #DFDFDF;
+	display: block;
+}
+div.frend h1 {
+	background-color: #F0F0F0;
+	width: 989px;
+	font-size: 18px;
+	line-height: 40px;
+	color: #666;
+	font-weight: normal;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+	border-bottom-color: #DFDFDF;
+}
+div.frend a {
+	text-decoration: none;
+	font-size:12px;
+}
+
+div.frend p  {
+	padding: 5px 5px;
+}
+#flink {
+	font-size: 14px;
+}
+
+
+
+
+/*底部样式*/
+.footer {
+	color:#e7e7e7;
+	padding:0;
+	text-align:center;
+	background: #707070;
+	margin-top:10px;
+}
+.centerf{
+	width:1000px;
+	margin:0 auto;
+}
+.footer  .end{
+	clear: both;
+	text-align: center;
+	line-height: 36px;
+	color: #333;
+}
+.footer .end a {
+	text-decoration: none;
+	font-size: 12px;
+	line-height: 36px;
+	color: #e1e1e1;
+}
+.footer .end a:hover {
+}
+
+.footer a{
+	text-decoration: none;
+	color: #e7e7e7;
+}
+address {
+	font-style: normal;
+}
+.friend {
+	background-color: #707070;
+}
+
+.friendlink {
+	width: 1000px;
+	margin-top: 0px;
+	margin-right: auto;
+	margin-bottom: 0px;
+	margin-left: auto;
+}
+/*.fleft {
+	float: left;
+	width: 163px;
+	background-image: url(../../images/footlogo.png);
+	background-repeat: no-repeat;
+	background-position: left top;
+	height: 220px;
+}*/
+.fright {
+	float: left;
+	border-left-width: 1px;
+	border-left-style: dashed;
+	border-left-color: #999;
+}
+.fright .tabout {
+	font-size: 16px;
+	font-family: "楷体";
+	text-align: left;
+	padding: 2px 5px;
+}
+.addressbox {
+	width: 810px;
+	float: left;
+}
+.addressbox .adr {
+	float: left;
+	width: 250px;
+	text-align: left;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+.addressbox .adr p.cp {
+	font-family: "微软雅黑";
+	font-size: 20px;
+	color: #fff;
+	font-weight: bold;
+}
+.addressbox .adr p {
+	line-height: 22px;
+	font-family: "宋体";
+	font-size: 12px;
+	margin: 8px 0 8px 0;
+}
+.bgback {
+	background-color: #5d5d5d;
+}
+.copy {
+	font-size: 12px;
+	line-height: 36px;
+}
+.friendlink a {
+	color: #AFA7A7;
+}
